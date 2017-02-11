@@ -13,6 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 from scipy import ndimage
+from scipy import misc
 import tensorflow as tf
 from spatial_transformer import transformer
 import numpy as np
@@ -58,4 +59,5 @@ sess = tf.Session()
 sess.run(tf.initialize_all_variables())
 y = sess.run(h_trans, feed_dict={x: batch})
 
-plt.imshow(y[0])
+misc.imsave('cat_res.png',y[0])
+#plt.imshow(y[0])
