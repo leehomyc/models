@@ -58,4 +58,4 @@ sess = tf.Session()
 sess.run(tf.initialize_all_variables())
 y = sess.run(h_trans, feed_dict={x: batch})
 
-# plt.imshow(y[0])
+plt.imshow(y[0])
